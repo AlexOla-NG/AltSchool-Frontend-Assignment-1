@@ -4,6 +4,7 @@ import math from "mathjs";
 import "./App.css";
 import Display from "./Display";
 import Button from "./Button";
+import "./calculator-wrapper.css";
 
 const App = () => {
   // set state
@@ -53,15 +54,17 @@ const App = () => {
 
   return (
     <div className="App">
-      <Display data={operations} />
-      <section className="Buttons">
-        {generateButtons()}
+      <div className="calculator-wrapper">
+        <Display data={operations} />
+        <section className="Buttons">
+          {generateButtons()}
 
-        <Button onClick={handleClick} label="CE" value="clear" />
-        <Button onClick={handleClick} label="-" value="-" />
-        <Button onClick={handleClick} label="+" size="2" value="+" />
-        <Button onClick={handleClick} label="=" size="2" value="equal" />
-      </section>
+          <Button onClick={handleClick} label="CE" value="clear" />
+          <Button onClick={handleClick} label="-" value="-" />
+          <Button onClick={handleClick} label="+" size="2" value="+" />
+          <Button onClick={handleClick} label="=" size="2" value="equal" />
+        </section>
+      </div>
     </div>
   );
 };
