@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import update from "immutability-helper";
 import math from "mathjs";
 import "./App.css";
+import "./calculator-wrapper.css";
 import Display from "./Display";
 import Button from "./Button";
-import "./calculator-wrapper.css";
+
 
 const App = () => {
   // set state
